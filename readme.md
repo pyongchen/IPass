@@ -45,8 +45,8 @@ gulp serve
 1. 首页
 <img src="https://github.com/CPYcpyCPY/IPass/blob/master/src/assets/images/show/home.png?raw=true"
   width="412px" height="732px">
-2. 我的
-<img src="https://github.com/CPYcpyCPY/IPass/blob/master/src/assets/images/show/me.png?raw=true"
+2. 首页筛选
+<img src="https://github.com/CPYcpyCPY/IPass/blob/master/src/assets/images/show/select.png?raw=true"
    width="412px" height="732px">
 3. 热力图
 <img src="https://github.com/CPYcpyCPY/IPass/blob/master/src/assets/images/show/heat.png?raw=true"
