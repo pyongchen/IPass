@@ -1,0 +1,105 @@
+mixin teams-image
+  div.teams-image(layout="row").pt-30
+    img#first-img(ng-src="{{ vm.activity.teamsinfo[0].image}}" flex="50"
+      ng-click="vm.goToTeam(vm.activity.teamsinfo[0]._id)")
+    span.pt-15.white VS
+    img#second-img(flex="50" ng-src="{{ vm.activity.teamsinfo[1].image}}"
+      ng-click="vm.goToTeam(vm.activity.teamsinfo[1]._id)")
+
+mixin signin-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ui-sref="home.activity")
+        a.navbar-brand.user-middle-text(href="#") 签到页面
+        span.navbar-brand.glyphicon.glyphicon-th-list#list(href="#")
+
+mixin teams-info
+  div.p-10.teams-info
+    div(layout="row" layout-align="space-between")
+      div
+        span.md-title {{ vm.activity.teamsinfo[0].name }}
+        span.md-body-1.red   LV {{ vm.activity.teamsinfo[0].level }}
+      div
+        span.md-title {{ vm.activity.teamsinfo[1].name }}
+        span.md-body-1.red  LV {{ vm.activity.teamsinfo[1].level }}
+    div(layout="column" layout-align="space-between")
+      div(layout="row" layout-align="space-between")
+        span.md-title Overall
+        span.md-title Overall
+      div(layout="row" layout-align="space-between")
+        span(flex="{{vm.flex}}").overall-left.pl-20.md-body-1 {{ vm.activity.teamsinfo[0].overall}}
+        span.overall-right.pr-20.md-body-1(flex) {{ vm.activity.teamsinfo[1].overall}}
+
+      div(layout="row" layout-align="space-between").pt-10
+        div.md-caption
+          span.pr-20 fans: {{ vm.activity.teamsinfo[0].fans}}
+          span 失约率: {{ vm.activity.teamsinfo[0].loseRate }}
+        div.md-caption
+          span.pr-20 fans: {{ vm.activity.teamsinfo[1].fans}}
+          span 失约率: {{ vm.activity.teamsinfo[1].loseRate }}
+
+mixin team_header
+   div.header-player.mt-5
+    h3.text-align-center.pt-10 当家球星
+    div(layout="row" layout-align="space-around center")
+      md-list-item.md-3-line(flex="50" ng-click="vm.goToPlayer(vm.activity.teamsinfo[0].header.id)")
+        img(ng-src="{{ vm.activity.teamsinfo[0].header.image }} ").md-avatar
+        div.md-list-item-text(layout="column")
+          p 位置: PG
+          p 综合实力: {{ vm.activity.teamsinfo[0].header.overall}}
+          p {{ vm.activity.teamsinfo[0].header.name}}
+      p.red.md-title.pr-10.mt-10 VS
+      md-list-item.md-3-line(flex="50" ng-click="vm.goToPlayer(vm.activity.teamsinfo[1].header.id)")
+        div.md-list-item-text(layout="column")
+          p 位置: PG
+          p 综合实力: {{ vm.activity.teamsinfo[1].header.overall}}
+          p {{ vm.activity.teamsinfo[1].header.name}}
+        img(ng-src="{{ vm.activity.teamsinfo[1].header.image }} ").md-avatar
+
+mixin teams
+  div.starting-members.mb-10
+    h3.text-align-center.pt-10 首发阵容
+    div(layout="row" layout-align="space-around center"
+        ng-repeat="member in vm.activity.teamsinfo[0].members.starting")
+      md-list-item.md-3-line(flex="50" ng-click="vm.goToPlayer(vm.activity.teamsinfo[0].members.starting[$index].id)")
+        img(ng-src="{{ vm.activity.teamsinfo[0].members.starting[$index].image }} ").md-avatar
+        div.md-list-item-text(layout="column")
+          p 位置: PG
+          p 综合实力: {{ vm.activity.teamsinfo[0].members.starting[$index].overall}}
+          p {{ vm.activity.teamsinfo[0].members.starting[$index].name}}
+      p.red.md-title.pr-10.mt-10 VS
+      md-list-item.md-3-line(flex="50" ng-click="vm.goToPlayer(vm.activity.teamsinfo[1].members.starting[$index].id)")
+        div.md-list-item-text(layout="column")
+          p 位置: PG
+          p 综合实力: {{ vm.activity.teamsinfo[1].members.starting[$index].overall}}
+          p {{ vm.activity.teamsinfo[1].members.starting[$index].name}}
+        img(ng-src="{{ vm.activity.teamsinfo[1].members.starting[$index].image }} ").md-avatar
+  div.substitution-members.bg-white.mb-60
+    h3.text-align-center.pt-10 替补阵容
+    div(layout="row" layout-align="space-around center"
+      ng-repeat="member in vm.activity.teamsinfo[0].members.substitution")
+      md-list-item.md-3-line(flex="50" ng-click="vm.goToPlayer(vm.activity.teamsinfo[0].members.substitution[$index].id)")
+        img(ng-src="{{ vm.activity.teamsinfo[0].members.substitution[$index].image }} ").md-avatar
+        div.md-list-item-text(layout="column")
+          p 位置: PG
+          p 综合实力: {{ vm.activity.teamsinfo[0].members.substitution[$index].overall}}
+          p {{ vm.activity.teamsinfo[0].members.substitution[$index].name}}
+      p.red.md-title.pr-10.mt-10 VS
+      md-list-item.md-3-line(flex="50" ng-click="vm.goToPlayer(vm.activity.teamsinfo[1].members.substitution[$index].id)")
+        div.md-list-item-text(layout="column")
+          p 位置: PG
+          p 综合实力: {{ vm.activity.teamsinfo[1].members.substitution[$index].overall}}
+          p {{ vm.activity.teamsinfo[1].members.substitution[$index].name}}
+        img(ng-src="{{ vm.activity.teamsinfo[1].members.substitution[$index].image }} ").md-avatar
+    h4(ng-if="!vm.hassub").text-align-center.pb-10 无
+
+div#activitySignin
+  +signin-header
+  +teams-image
+  +teams-info
+  +team_header
+  +teams
+  div(layout="row").navbar.navbar-default.navbar-fixed-bottom
+    md-button#signin-btn.md-raised.md-warn.btn-block.m-0(ng-click="vm.signin()") 签到
+

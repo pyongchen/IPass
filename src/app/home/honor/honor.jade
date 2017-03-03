@@ -1,0 +1,48 @@
+mixin honor-search
+  div.honor-search
+    div.dropdown.honor-drop
+      div.ui.button.dropdown-toggle#place_(type="button" data-toggle="dropdown") 地区
+      md-list.dropdown-menu.honor-drop1(role="menu")
+        md-list-item(ng-click="vm.filterHonor('place', filter)" ng-repeat="filter in vm.filters.place")
+          span {{filter}}
+        md-divider(ng-if="$index != vm.filters.place.length - 1")
+    div.dropdown.honor-drop
+      div.ui.button.dropdown-toggle#distance(type="button" data-toggle="dropdown") 距离
+      md-list.dropdown-menu.honor-drop2(role="menu")
+        md-list-item(ng-click="vm.filterHonor('distance', filter)" ng-repeat="filter in vm.filters.distance")
+          span {{filter}}
+        md-divider(ng-if="$index != filters.distance.length - 1")
+    div.dropdown.honor-drop
+      div.ui.button.dropdown-toggle#level(type="button" data-toggle="dropdown") 等级
+      md-list.dropdown-menu.honor-drop3(role="menu")
+        md-list-item(ng-click="vm.filterHonor('level', filter)" ng-repeat="filter in vm.filters.level")
+          span {{filter}}
+        md-divider(ng-if="$index != filters.level.length - 1")
+    div.dropdown.honor-drop
+      div.ui.button.dropdown-toggle#others(type="button" data-toggle="dropdown") 筛选
+      md-list.dropdown-menu.honor-drop4(role="menu")
+        md-list-item(ng-click="vm.filterHonor('others', filter)" ng-repeat="filter in vm.filters.others")
+          span {{filter}}
+        md-divider(ng-if="$index != filters.others.length - 1")
+
+mixin players
+  div.honorPlayers
+    div(ng-repeat='player in vm.players', ng-click="vm.goToPlayer(player._id)")
+      div.row.honorPlayers-player
+        div.col-xs-3.honorPlayers-white
+          img.img-circle.honorPlayers-img(ng-src='{{player.image}}')
+        div.col-xs-8.honorPlayers-person.honorPlayers-white
+          div.row.honorPlayers-message
+            p.col-xs-4.honorPlayers-name {{player.name}}
+            p.col-xs-3.honorPlayers-level LV {{player.level}}
+            p.col-xs-5.text-right.honorPlayers-fans 粉丝: {{player.fans}}
+          div.honorPlayers-signature {{player.signature}}
+          div.honorPlayers-others
+            p.col-xs-3.honorPlayers-position {{player.position}}
+            p.col-xs-4.honorPlayers-MVP MVP {{player.MVP}}
+            p.col-xs-5.text-right.honorPlayers-loseRate 失约率 {{player.loseRate}}
+      md-divider
+
+div#app-honor
+  +honor-search
+  +players

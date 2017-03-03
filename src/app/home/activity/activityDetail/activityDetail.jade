@@ -1,0 +1,89 @@
+mixin activity-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ui-sref="home.activity")
+        a.navbar-brand.user-middle-text(href="#") 活动详情
+        span.navbar-brand.glyphicon.glyphicon-th-list#list(href="#")
+
+mixin unfighted
+  div#game-info
+    img(ng-src="{{vm.activity.cover }}").surface-plot.mt-50
+    div.game-intro
+      p.theme {{vm.activity.type}} {{ vm.activity.title }}
+      p.remark {{ vm.activity.message }}
+    hr
+    div.location(ng-click="vm.showMap()")
+      span.glyphicon.glyphicon-map-marker.pr-10
+      span {{ vm.activity.location }}
+    hr
+    div.time
+      span.glyphicon.glyphicon-time.pr-10
+      span {{ vm.activity.time }}
+    hr
+    div.loseRate
+      span 失约率:
+      span {{ vm.activity.loseRate }}
+    hr
+    div.ability
+      span 综合实力: {{ vm.activity.overallLimit }}
+      span {{ vm.activity.ability }}
+      div.join-num(ng-if="!vm.type")
+        span 参数人数:
+        span {{vm.activity.players.length}}/{{vm.activity.maxNum}}
+
+mixin info
+    img(ng-src="{{vm.activity.caller.image}}").player-image.img-circle
+    div.publisher-info
+      p
+        span.pr-14 {{ vm.activity.caller.name}}
+        span LV {{vm.activity.caller.level}}
+      p
+        span.pr-20 位置: PG
+        span.pr-20 综合实力: {{vm.activity.caller.overall}}
+        span 失约率: {{vm.activity.caller.loseRate}}
+
+
+mixin player-info
+  div.mb-14(ng-if="vm.type == 'wild'")
+    div.publisher(ng-click="vm.goToPlayer(vm.activity.caller.id)")
+      h4 发布人:
+      div
+        +info
+    div.joiner.pl-20.pr-20
+      h4 参赛者:
+      div(ng-repeat="player in vm.activity.players", ng-click="vm.goToPlayer(player._id)")
+        img(ng-src="{{player.image}}").player-image.img-circle
+        div.player-info
+          p
+            span.pr-14 {{ player.name}}
+            span LV {{ player.level}}
+          p
+            span.pr-20 位置: PG
+            span.pr-20 综合实力: {{player.overall}}
+            span 失约率: {{player.loseRate}}
+        md-divider
+
+mixin player-team
+  div(ng-if="vm.type == '3V3' || vm.type == '5V5'" ng-click="vm.gotoTeamActivity(vm.activity.teams[0].id)")
+    img.team-image(ng-src="{{vm.activity.teams[0].image}}")
+    div.ad-team-info.m-0.p-10
+      span.team-name.pr-15 {{ vm.activity.teams[0].name }}
+      span.team-level LV {{ vm.activity.teams[0].level }}
+      span.pl-60.pr-10 失约率:{{ vm.activity.teams[0].loseRate}}
+      span 粉丝: {{ vm.activity.teams[0].fans }}
+
+div#activityDetail
+  +activity-header
+  +unfighted
+  div.ensure-button
+    button.btn-block.ensure(ng-if="!vm.isfulled" ng-click="joinGame()")
+      span 确定参战
+    button.btn-block.fulled(ng-if="vm.isfulled")
+      span 人数已满
+  +player-info
+  +player-team
+
+div#detail-map
+i.remove.circle.outline.icon#close-detailMap-icon(
+  ng-click="vm.closeDetailMap()")

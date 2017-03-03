@@ -1,0 +1,22 @@
+{
+  "data":[
+    {
+      "id": 1,
+      "name": "张三",
+      "image": "assets/images/referees/re1.jpg",
+      "level": 3
+    },
+    {
+      "id": 2,
+      "name": "李四",
+      "image": "assets/images/referees/re1.jpg",
+      "level": 2
+    },
+    {
+      "id": 3,
+      "name": "王五",
+      "image": "assets/images/referees/re1.jpg",
+      "level": 1
+    }
+  ]
+}

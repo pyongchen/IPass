@@ -1,0 +1,107 @@
+mixin user-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ng-click="vm.goToUser()")
+        span.navbar-brand.user-middle-text 我的比赛
+        span.navbar-brand.glyphicon.glyphicon-th-list#list(href="#")
+
+//单挑列表
+mixin One
+  div.game-one
+    ul.game-one-list
+      li(ng-repeat="ac in vm.player.games.one")
+        div.media
+          a.media-left(href="#")
+            img.img-circle(ng-src="{{ac.opponent.image}}")
+            span(style="margin-left:0.8em") {{ac.opponent.name}}
+          div.media-body
+            span 时间: {{ac.time}}
+            br
+            span 地点: {{ac.location}}
+            br
+            span 状态: {{ac.status}}
+            span.btn.btn-danger.quit(ng-if="ac.status=='未开始'") 退出比赛
+        hr
+
+//野球列表
+mixin Wild
+  div#wild-game(ng-repeat="ac in vm.player.games.wild"
+    ng-click="vm.gotoDetail(ac._id, ac.type_)").mainpage-activity.bg-success
+    p.theme {{ ac.title }}
+    p.location
+    span.glyphicon.glyphicon-map-marker.pr-10 {{ ac.location }}
+    p.time
+    span.glyphicon.glyphicon-time.pr-10 {{ ac.time }}
+    p.condition
+    span#loseRate 失约: {{ ac.loseRate }}
+    span 等级: {{ ac.level }}
+    p.host {{ ac.referees.name }}
+
+//3V3列表
+mixin Three
+  div.three-div(ng-repeat="ac in vm.player.games.three"
+    ng-click="vm.gotoDetail(ac._id, ac.type_)")
+    img.left(ng-src="{{ac.teams[0].image}}")
+    img.right(ng-src="{{ac.teams[1].image}}")
+    span.left-name {{ac.teams[0].name}}
+    span.vs VS
+    span.right-name {{ac.teams[1].name}}
+    span.info-position.glyphicon.glyphicon-map-marker {{ac.location}}
+    span.info-time.glyphicon.glyphicon-time {{ac.time}}
+    hr
+
+//5V5列表
+mixin Five
+  div.three-div(ng-repeat="ac in vm.player.games.five"
+    ng-click="vm.gotoDetail(ac._id, ac.type_)")
+    img.left(ng-src="{{ac.teams[0].image}}")
+    img.right(ng-src="{{ac.teams[1].image}}")
+    span.left-name {{ac.teams[0].name}}
+    span.vs VS
+    span.right-name {{ac.teams[1].name}}
+    span.info-position.glyphicon.glyphicon-map-marker {{ac.location}}
+    span.info-time.glyphicon.glyphicon-time {{ac.time}}
+    hr
+
+mixin games
+  md-content.games-nav.md-padding
+    md-nav-bar(md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links")
+      md-nav-item(md-nav-click="goto('one')" name="one") 单挑
+      md-nav-item(md-nav-click="goto('wild')" name="wild") 野球
+      md-nav-item(md-nav-click="goto('three')" name="three") 3V3
+      md-nav-item(md-nav-click="goto('five')" name="five") 5V5
+    div.game-content
+      ng-if(ng-if="!currentNavItem")
+        +One
+      ng-if(ng-if="currentNavItem == 'one'")
+        +One
+      ng-if(ng-if="currentNavItem == 'wild'")
+        +Wild
+      ng-if(ng-if="currentNavItem == 'three'")
+        +Three
+      ng-if(ng-if="currentNavItem == 'five'")
+        +Five
+  //ul.games-nav.nav.nav-pills(role="tablist")
+  //  li.active(role="presentation")
+  //    a(href="#1On1" role="tab" data-toggle="tab") 单挑
+  //  li(role="presentation")
+  //    a(href="#wild" role="tab" data-toggle="tab") 野球
+  //  li(role="presentation")
+  //    a(href="#3v3" role="tab" data-toggle="tab") 3V3
+  //  li(role="presentation")
+  //    a(href="#5v5" role="tab" data-toggle="tab") 5V5
+  //hr
+  //div.tab-content.games-content
+  //  div.tab-pane.fade.in.active#1On1(role="tabpanel")
+  //    +One
+  //  div.tab-pane.fade#wild(role="tabpanel")
+  //    +Wild
+  //  div.tab-pane.fade#3v3(role="tabpanel")
+  //    +Three
+  //  div.tab-pane.fade#5v5(role="tabpanel")
+  //    +Five
+
+div#app-user
+  +user-header
+  +games

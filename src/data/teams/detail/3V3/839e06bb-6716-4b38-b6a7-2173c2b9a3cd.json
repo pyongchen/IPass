@@ -1,0 +1,74 @@
+{
+  "data": {
+    "id": "839e06bb-6716-4b38-b6a7-2173c2b9a3cd",
+    "name": "真心队",
+    "image": "assets/images/teams/t4.jpg",
+    "overall": 76,
+    "type": "3V3",
+    "level": 3,
+    "fans": "50万",
+    "loseRate": "10%",
+    "signature": "人人为我，我为人人",
+    "header": {
+      "id": "7236b834-8726-4c44-8459-5638cd574976",
+      "name": "冯州龙",
+      "image": "assets/images/players/6.jpg",
+      "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+      "level": 2,
+      "overall": 76,
+      "loseRate": "8%",
+      "fans": "40万",
+      "MVP": 3
+    },
+    "members": {
+      "starting":[
+        {
+          "id": "7236b834-8726-4c44-8459-5638cd574976",
+          "name": "冯州龙",
+          "image": "assets/images/players/6.jpg",
+          "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+          "level": 2,
+          "overall": 76,
+          "loseRate": "8%",
+          "fans": "40万",
+          "MVP": 3
+        },
+        {
+          "id": "c2454c2e-5f03-4880-aa4b-325b7d5ce0ea",
+          "name": "黎丙赣",
+          "image": "assets/images/players/8.jpg",
+          "signature": "我可以接受失败，但无法接受放弃",
+          "level": 3,
+          "overall": 77,
+          "loseRate": "9%",
+          "fans": "25万",
+          "MVP": 3
+        }
+      ],
+      "substitution": [
+        {
+          "id": "f988561e-a60a-4a87-8754-d06840313d6e",
+          "name": "谢尉争",
+          "image": "assets/images/players/9.jpg",
+          "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+          "level": 1,
+          "overall": 73,
+          "loseRate": "2%",
+          "fans": "10万",
+          "MVP": 3
+        },
+        {
+          "id": "738b43bc-3f2b-4714-9d5d-81385fdac0da",
+          "name": "赵单羽",
+          "image": "assets/images/players/10.jpg",
+          "signature": "你永远不要低估一颗冠军的心",
+          "level": 4,
+          "overall": 65,
+          "loseRate": "4%",
+          "fans": "28万",
+          "MVP": 3
+        }
+      ]
+    }
+  }
+}

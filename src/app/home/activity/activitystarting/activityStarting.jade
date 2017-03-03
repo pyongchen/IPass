@@ -1,0 +1,71 @@
+mixin teams-image
+  div.teams-image(layout="row").mt-50
+    img#f-img(ng-src="{{ vm.activity.teams[0].image}}" flex="50"
+      ng-click="vm.goToTeam(vm.activity.teams[0]._id)")
+    span.pt-30.white VS
+    img#s-img(flex="50" ng-src="{{ vm.activity.teams[1].image}}"
+      ng-click="vm.goToTeam(vm.activity.teams[1]._id)")
+
+mixin activity-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ui-sref="home.activity")
+        a.navbar-brand.user-middle-text(href="#") 正在比赛
+        span.navbar-brand.glyphicon.glyphicon-th-list#list(href="#")
+
+#activityStarting.mt-20
+  +activity-header
+  +teams-image
+  div(layout="row" layout-align="space-between").bg-white.p-10
+    div
+      span.pr-10.md-title {{ vm.activity.teams[0].name }}
+      span.red LV {{ vm.activity.teams[0].level }}
+    div
+      span.pr-10.md-title  {{ vm.activity.teams[1].name }}
+      span.red LV {{ vm.activity.teams[1].level }}
+  div.timer.pt-40.pb-40
+    div(layout="row" layout-align="center").mb-20
+      div(layout="row")
+        p.timer-btn.mr-5 0
+        p.timer-btn.mr-10 {{ vm.hours }}
+      span.timer-text.mr-10 时
+      div(layout="row")
+        p.timer-btn.mr-5 {{ vm.lminutes }}
+        p.timer-btn.mr-10 {{ vm.minutes % 10 }}
+      span.timer-text.mr-10 分
+      div(layout="row")
+        p.timer-btn.mr-5 {{ vm.lseconds }}
+        p.timer-btn.mr-10 {{ vm.seconds % 10 }}
+      span.timer-text 秒
+    div(layout="row" layout-align="space-around").mb-10
+      div(layout="row")
+        p.score-table.mr-8 {{ (vm.Ascore - vm.Ascore % 100) / 100 }}
+        p.score-table.mr-8 {{ (vm.Ascore % 100 - vm.Ascore % 10) / 10}}
+        p.score-table {{ vm.Ascore % 10}}
+      div(layout="row")
+        p.score-table.mr-8 {{ (vm.Bscore - vm.Bscore % 100) / 100 }}
+        p.score-table.mr-8 {{ (vm.Bscore % 100 - vm.Bscore % 10) / 10}}
+        p.score-table {{ vm.Bscore % 10}}
+    div(layout="row")
+      p.score-btn(ng-click="vm.increaseScore(0)").ml-19 +
+      p.score-btn(ng-click="vm.decreaseScore(0)").ml-48 -
+      p.score-btn(ng-click="vm.increaseScore(1)").ml-38 +
+      p.score-btn(ng-click="vm.decreaseScore(1)").ml-47 -
+      //- md-button.md-raised.md-warn.score-btn(ng-click="vm.increaseScore(0)") +
+      //- md-button.md-raised.md-warn.score-btn(ng-click="vm.decreaseScore(0)") -
+      //- md-button.md-raised.md-warn.score-btn(ng-click="vm.increaseScore(1)") +
+      //- md-button.md-raised.md-warn.score-btn(ng-click="vm.decreaseScore(1)") -
+
+  div
+    div(layout="row" layout-align="space-between").p-10.md-title.bg-red.text-color-white.refer-intro
+      p 比赛裁判
+      p {{ vm.activity.referees.length }}人
+    div(layout="row").bg-white.mb-60
+      div(layout="column" ng-repeat="referee in vm.activity.referees" flex="25").pl-20.pr-20.pt-20.pb-10
+        img.referee-img(ng-src="{{ referee.image}}").img-circle
+        .md-title.pl-20  {{ referee.name }}
+    div(layout="row").bg-red.text-color.white.button-ctr.navbar.navbar-fixed-bottom.ipass-button
+      md-button(flex="33" ng-click="vm.startGame()") 比赛开始
+      md-button(flex="33" ng-click="vm.pauseGame()") 比赛暂停
+      md-button(flex="33" ng-click="vm.cancelGame()") 比赛结束

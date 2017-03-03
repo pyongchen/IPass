@@ -1,0 +1,20 @@
+mixin message-header
+  nav.navbar.navbar-default.navbar-fixed-top#message-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ng-click="vm.return()")
+        a.navbar-brand.message-title(href="#") 我的消息
+
+mixin message-content
+  div#message-content
+    div.ui.middle.aligned.divided.list
+      div.item#message-item(ng-repeat="mess in vm.message", ng-click="vm.goToChat(mess.id)")
+        img.ui.image(ng-src="{{mess.image}}")
+        div.content
+          div.header#message-name {{mess.target}}
+          span {{mess.info}}
+          span#message-time {{mess.time}}
+
+div#chat
+  +message-header
+  +message-content

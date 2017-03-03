@@ -1,0 +1,85 @@
+{
+  "data": {
+    "id": "3ff58eb2-1fc7-4e7f-8ddc-3a256b1ca48e",
+    "name": "梦之队",
+    "image": "assets/images/teams/t2.jpg",
+    "overall": 73,
+    "level": 2,
+    "type": "5V5",
+    "fans": "400万",
+    "loseRate": "5%",
+    "signature": "有些人比赛是为了比赛，有些人比赛时为了胜利，你呢？",
+    "feature": "擅长打快攻,防守反击十分出色",
+    "header": {
+      "id": "7236b834-8726-4c44-8459-5638cd574976",
+      "name": "冯州龙",
+      "image": "assets/images/players/6.jpg",
+      "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+      "level": 2,
+      "overall": 76,
+      "loseRate": "8%",
+      "fans": "40万",
+      "MVP": 3
+    },
+    "members":{
+      "starting": [
+        {
+          "id": "7236b834-8726-4c44-8459-5638cd574976",
+          "name": "冯州龙",
+          "image": "assets/images/players/6.jpg",
+          "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+          "level": 2,
+          "overall": 76,
+          "loseRate": "8%",
+          "fans": "40万",
+          "MVP": 3
+        },
+        {
+          "id": "ef32cd64-d286-4b84-b4d9-2fe85affae93",
+          "name": "简务帅",
+          "image": "assets/images/players/7.jpg",
+          "signature": "我过你就像过清晨的马路，等下我要在这里绝杀你，认住了，是这里",
+          "level": 2,
+          "overall": 71,
+          "loseRate": "10%",
+          "fans": "25万",
+          "MVP": 3
+        },
+        {
+          "id": "c2454c2e-5f03-4880-aa4b-325b7d5ce0ea",
+          "name": "黎丙赣",
+          "image": "assets/images/players/8.jpg",
+          "signature": "我可以接受失败，但无法接受放弃",
+          "level": 3,
+          "overall": 77,
+          "loseRate": "9%",
+          "fans": "25万",
+          "MVP": 3
+        },
+        {
+          "id": "f988561e-a60a-4a87-8754-d06840313d6e",
+          "name": "谢尉争",
+          "image": "assets/images/players/9.jpg",
+          "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+          "level": 1,
+          "overall": 73,
+          "loseRate": "2%",
+          "fans": "10万",
+          "MVP": 3
+        },
+        {
+          "id": "738b43bc-3f2b-4714-9d5d-81385fdac0da",
+          "name": "赵单羽",
+          "image": "assets/images/players/10.jpg",
+          "signature": "你永远不要低估一颗冠军的心",
+          "level": 4,
+          "overall": 65,
+          "loseRate": "4%",
+          "fans": "28万",
+          "MVP": 3
+        }
+      ],
+      "substitution": []
+    }
+  }
+}

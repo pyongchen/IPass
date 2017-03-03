@@ -1,0 +1,39 @@
+mixin user-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ng-click="vm.goToUser()")
+        a.navbar-brand.user-middle-text(href="#") 球友
+        span.navbar-brand.glyphicon.glyphicon-th-list#list(href="#")
+
+
+mixin friends
+  div.ballFriends(layout='column')
+    div(ng-repeat='friend in vm.friends', ng-click="vm.goToPlayer(friend._id)")
+      div.ballFriends-person(layout='row')
+        div(flex-xs='30')
+          img.img-circle.ballFriends-image(ng-src='{{friend.image}}')
+        div(flex)
+        div(flex-xs='66')
+          div(layout='row')
+            p.ballFriends-name(flex-xs='40') {{friend.name}}
+            p.ballFriends-LV(flex-xs='25') LV {{friend.level}}
+            p.ballFriends-fans.text-right(flex-xs='35')
+              span 粉丝:
+              {{friend.fans}}
+          div.ballFriends-signature {{friend.signature}}
+          div(layout='row')
+            p.ballFriends-position(flex-xs='40')
+              span.ballFriends-tag 位置
+              span PG
+            p.ballFriends-MVP(flex-xs='25')
+              span.ballFriends-tag MVP
+              {{friend.MVP}}
+            p.ballFriends-loseRate.text-right(flex-xs='35')
+              span.ballFriends-tag 失约率
+              {{friend.loseRate}}
+
+div#app-user
+  +user-header
+  div.ballFriends-blank
+  +friends

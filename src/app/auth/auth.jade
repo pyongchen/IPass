@@ -1,0 +1,17 @@
+div#auth
+  //img(src="/assets/images/logo.jpeg")
+  form.ui.form#login-box
+    input#auth-username(
+      ng-model="vm.username"
+      type="text" name="username" placeholder="用户名(手机号)")
+    input#auth-password(
+      ng-model="vm.password"
+      type="password" name="password" placeholder="密码")
+    button.ui.button#login-btn(type="submit", ng-click="vm.login()") 登录
+    a#auth-forget(ng-click="vm.forgetPassword()") 忘记密码
+    a#auth-register(ng-click="vm.register()") 注册账号
+    p#loginErrInfo {{vm.errInfo}}
+  div#other-login
+    md-divider
+    i.icon.qq.large#icon-qq
+    i.icon.wechat.large#icon-wechat

@@ -1,0 +1,47 @@
+mixin home-header
+  nav.navbar.navbar-default.navbar-fixed-top#home-header
+    div.container
+      div.navbar-header
+        span.navbar-brand 广州
+        span.navbar-brand.middle() IPass约球
+        span.navbar-brand.glyphicon.glyphicon-search#search(ng-click="vm.search('3d37a9da-e001-4675-a0ab-2290f9e91cd3')")
+
+mixin home-footer
+  nav.navbar.navbar-default.navbar-fixed-bottom#home-footer(role="navigation")
+    div.container-fluid
+      div.navbar-header
+        div.btn-group.btn-group-justified
+          div.btn-group
+            button.btn.btn-default.nav-btn(ui-sref="home.activity")
+              i.announcement.icon.bottom-nav-icon 活动
+          div.btn-group
+            button.btn.btn-default.nav-btn(ui-sref="home.honor")
+              i.icon.sort.content.descending.bottom-nav-icon 荣耀
+          div.btn-group.middle
+            div.menu
+              button.btn.trigger#add
+                img(src="assets/images/home/basketball.png")
+              div.icons
+                div.rotater
+                  div.btn.btn-icon
+                    span.font(ng-click="vm.publish('5V5')") 5V5
+                div.rotater
+                  div.btn.btn-icon
+                    span.font(ng-click="vm.publish('5V5')") 野球
+                div.rotater
+                  div.btn.btn-icon
+                    span.font(ng-click="vm.publish('oneToOne')") 单挑
+                div.rotater
+                  div.btn.btn-icon
+                    span.font(ng-click="vm.publish('3V3')") 3V3
+          div.btn-group
+            button.btn.btn-default.nav-btn(ui-sref="home.service")
+              i.icon.paw.bottom-nav-icon 足迹
+          div.btn-group
+            button.btn.btn-default.nav-btn(ng-click="vm.goToUser()")
+              i.icon.user.bottom-nav-icon 我的
+
+div#home-container
+  +home-header
+  div.animate-slide-left#home-body(ui-view="content")
+  +home-footer

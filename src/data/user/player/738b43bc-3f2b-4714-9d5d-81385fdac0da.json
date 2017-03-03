@@ -1,0 +1,334 @@
+{
+  "data": {
+    "id": "738b43bc-3f2b-4714-9d5d-81385fdac0da",
+    "phone": "15521294321",
+    "name": "赵单羽",
+    "image": "assets/images/players/10.jpg",
+    "signature": "世界抛弃了我，可还有篮球陪着我",
+    "level": 4,
+    "overall": 65,
+    "position": "小前锋",
+    "loseRate": "8%",
+    "fans": "28万",
+    "MVP": 3,
+    "type": "onJob",
+    "idol": "林书豪",
+    "feature": "速度快,投篮准,防守一般",
+    "strength": {
+      "board": 7,
+      "score": 8,
+      "assist": 6,
+      "block": 5,
+      "defend": 7
+    },
+    "history": {
+      "wild": {
+        "win": 11,
+        "total": 12,
+        "rate": 91.7
+      },
+      "three": {
+        "win": 9,
+        "total": 10,
+        "rate": 90.0
+      },
+      "five": {
+        "win": 90,
+        "total": 110,
+        "rate": 81.8
+      }
+    },
+    "activePlaces":[
+      "大学城中大篮球场",
+      "大学城华师篮球场",
+      "大学城广外篮球场"
+    ],
+    "friends": [
+      {
+        "id": "3d37a9da-e001-4675-a0ab-2290f9e91cd3",
+        "name": "郭山彤",
+        "image": "assets/images/players/2.jpg",
+        "signature": "我从不惧怕任何对手，只怕对手不够强大",
+        "level": 2,
+        "overall": 75,
+        "loseRate": "10%",
+        "fans": "25万",
+        "MVP": 3
+      },
+      {
+        "id": "1f661f44-a371-46ba-9722-56ea268dde8e",
+        "name": "梁敦厦",
+        "image": "assets/images/players/2.jpg",
+        "signature": "世界抛弃了我，可还有篮球陪着我",
+        "level": 2,
+        "overall": 72,
+        "loseRate": "5%",
+        "fans": "21万",
+        "MVP": 2
+      },
+      {
+        "id": "2430b560-ce50-4c34-b6d2-b232519028c6",
+        "name": "霍负浪",
+        "image": "assets/images/players/3.png",
+        "signature": "我不尊重任何人，包括乔丹，因为我要胜利",
+        "level": 2,
+        "overall": 80,
+        "loseRate": "12%",
+        "fans": "13亿",
+        "MVP": 3
+      },
+      {
+        "id": "54d27324-6f21-4bfe-8a94-62848c7d62f5",
+        "name": "虞信品",
+        "image": "assets/images/players/6.jpg",
+        "signature": "我把每一场比赛都当作我最后的一场比赛来打",
+        "level": 2,
+        "overall": 78,
+        "loseRate": "7%",
+        "fans": "100万",
+        "MVP": 3
+      },
+      {
+        "id": "2a5f8226-b35a-4793-ae96-32bddf2fe20d",
+        "name": "马仁毅",
+        "image": "assets/images/players/4.jpg",
+        "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+        "level": 2,
+        "overall": 77,
+        "loseRate": "7%",
+        "fans": "80万",
+        "MVP": 1
+      },
+      {
+        "id": "7236b834-8726-4c44-8459-5638cd574976",
+        "name": "冯州龙",
+        "image": "assets/images/players/6.jpg",
+        "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+        "level": 2,
+        "overall": 76,
+        "loseRate": "8%",
+        "fans": "40万",
+        "MVP": 3
+      },
+      {
+        "id": "ef32cd64-d286-4b84-b4d9-2fe85affae93",
+        "name": "简务帅",
+        "image": "assets/images/players/7.jpg",
+        "signature": "我过你就像过清晨的马路，等下我要在这里绝杀你，认住了，是这里",
+        "level": 2,
+        "overall": 71,
+        "loseRate": "10%",
+        "fans": "25万",
+        "MVP": 3
+      },
+      {
+        "id": "c2454c2e-5f03-4880-aa4b-325b7d5ce0ea",
+        "name": "黎丙赣",
+        "image": "assets/images/players/8.jpg",
+        "signature": "我可以接受失败，但无法接受放弃",
+        "level": 3,
+        "overall": 77,
+        "loseRate": "9%",
+        "fans": "25万",
+        "MVP": 3
+      },
+      {
+        "id": "f988561e-a60a-4a87-8754-d06840313d6e",
+        "name": "谢尉争",
+        "image": "assets/images/players/9.jpg",
+        "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+        "level": 1,
+        "overall": 73,
+        "loseRate": "2%",
+        "fans": "10万",
+        "MVP": 3
+      }
+    ],
+    "teams": [
+      {
+        "id": "839e06bb-6716-4b38-b6a7-2173c2b9a3cd",
+        "name": "真心队",
+        "type": "3V3",
+        "image": "assets/images/teams/t4.jpg",
+        "signature": "人人为我，我为人人",
+        "overall": 76,
+        "level": 3,
+        "fans": "50万",
+        "loseRate": "10%"
+      },
+      {
+        "id": "3ff58eb2-1fc7-4e7f-8ddc-3a256b1ca48e",
+        "name": "梦之队",
+        "type": "5V5",
+        "image": "assets/images/teams/t5.jpg",
+        "signature": "有些人比赛是为了比赛，有些人比赛时为了胜利，你呢？",
+        "overall": 73,
+        "level": 2,
+        "fans": "400万",
+        "loseRate": "5%"
+      }
+    ],
+    "games": {
+      "one": [
+        {
+          "id": "8403995b-acbd-4454-a970-192ac01bf7e2",
+          "time": "11月8号下午3:00",
+          "location": "大学城中大篮球场2号场",
+          "status": "正在比赛",
+          "message": "已向哈登发送单挑请求",
+          "opponent": {
+            "id": 9,
+            "name": "哈登",
+            "image": "assets/images/players/9.jpg",
+            "signature": "宁做鸡头,不做凤尾",
+            "level": 2,
+            "overall": 70,
+            "loseRate": "4%",
+            "fans": "15万",
+            "MVP": 0
+          }
+        },
+        {
+          "id": "6de631b1-1bd6-49a9-b21b-b19f7fafe23d",
+          "time": "11月10号下午4:00",
+          "location": "大学城中大篮球场12号场",
+          "status": "未开始",
+          "message": "已向乔治发送单挑请求",
+          "opponent": {
+            "id": 8,
+            "name": "乔治",
+            "image": "assets/images/players/8.jpg",
+            "signature": "满血复出,王者归来",
+            "level": 3,
+            "overall": 71,
+            "loseRate": "4%",
+            "fans": "22万",
+            "MVP": 1
+          }
+        }
+      ],
+      "wild": [
+        {
+          "id": 3,
+          "type": "wild",
+          "title": "切磋球技",
+          "level": 3,
+          "loseRate": "6%",
+          "time": "10月20号下午4:30",
+          "location": "大学城中大篮球场5号场",
+          "cover": "assets/images/publish-bg/bg.png",
+          "message": "随便玩玩,高手绕道",
+          "isStarted": false,
+          "isJoin": true,
+          "hasReferee": false,
+          "numbers": 9,
+          "reward": 3
+        }
+      ],
+      "three": [
+        {
+          "id": 1,
+          "type": "3V3",
+          "title": "求高手,菜鸟绕道",
+          "level": 3,
+          "loseRate": "6%",
+          "time": "10月20号下午4:00",
+          "location": "大学城中大篮球场10号场",
+          "cover": "assets/images/publish-bg/bg.png",
+          "message": "各位球员请提前半个钟到场热身,请勿迟到缺席,如临时有事,请私聊我",
+          "status": "未开始",
+          "hasReferee": false,
+          "reward": 3,
+          "teams": [
+            {
+              "id": 1,
+              "name": "中大骑士队",
+              "image": "assets/images/teams/t4.jpg",
+              "signature": "一起打球,一起哈皮",
+              "overall": 70,
+              "level": 3,
+              "fans": "30万",
+              "loseRate": "5%"
+            },
+            {
+              "id": 2,
+              "name": "中大勇士",
+              "image": "assets/images/teams/t3.jpg",
+              "signature": "三分大队",
+              "overall": 72,
+              "level": 3,
+              "fans": "300万",
+              "loseRate": "6%"
+            }
+          ],
+          "referees": [
+            {
+              "id": 1,
+              "name": "张三",
+              "image": "assets/images/referees/re1.jpg",
+              "level": 3
+            }
+          ]
+        }
+      ],
+      "five": [
+        {
+          "id": 2,
+          "type": "5V5",
+          "title": "巅峰对决,欢迎广大球员捧场",
+          "level": 3,
+          "loseRate": "6%",
+          "time": "10月22号下午4:00",
+          "location": "大学城中大篮球场8号场",
+          "cover": "assets/images/publish-bg/bg.png",
+          "message": "各位球员请提前半个钟到场热身,请勿迟到缺席,如临时有事,请私聊我",
+          "status": "未开始",
+          "hasReferee": false,
+          "reward": 3,
+          "teams": [
+            {
+              "id": 1,
+              "name": "詹姆斯战队",
+              "image": "assets/images/teams/t4.jpg",
+              "signature": "一起打球,一起哈皮",
+              "overall": 70,
+              "level": 3,
+              "fans": "30万",
+              "loseRate": "5%"
+            },
+            {
+              "id": 2,
+              "name": "韦德战队",
+              "image": "assets/images/teams/t5.jpg",
+              "signature": "天下武功,唯快不破",
+              "overall": 72,
+              "level": 3,
+              "fans": "300万",
+              "loseRate": "6%"
+            }
+          ],
+          "referees": [
+            {
+              "id": 1,
+              "name": "张三",
+              "image": "assets/images/referees/re1.jpg",
+              "level": 3
+            },
+            {
+              "id": 2,
+              "name": "李四",
+              "image": "assets/images/referees/re1.jpg",
+              "level": 2
+            },
+            {
+              "id": 3,
+              "name": "王五",
+              "image": "assets/images/referees/re1.jpg",
+              "level": 1
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

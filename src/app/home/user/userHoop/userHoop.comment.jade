@@ -1,0 +1,9 @@
+md-dialog(aria-label='comment')
+  form
+    md-dialog-content
+      div.md-dialog-content
+        textarea(id='comment')
+    md-dialog-actions(layout='row')
+      md-button(ng-click='postComment()') 发布
+      span(flex)
+      md-button(ng-click='cancelComment()') 取消

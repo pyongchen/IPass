@@ -1,0 +1,29 @@
+mixin user-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ng-click="vm.goToUser()")
+        a.navbar-brand.user-middle-text(href="#") 球队
+        span.navbar-brand.glyphicon.glyphicon-th-list#list(href="#")
+
+
+mixin teams
+  div.ballTeams
+    div.ballTeam(ng-repeat='team in vm.teams', ng-click="vm.goToTeam(team._type, team._id)")
+      div(ui-sref='home.ballTeam.detail' layout='column')
+        div(flex-xs='30')
+          img.ballTeam-image(ng-src='{{team.image}}')
+        div.ballTeam-message(layout='row' flex-xs='70')
+          div.ballTeam-teamName(flex-xs='20') {{team.name}}
+          div.ballTeam-LV(flex-xs='20') LV
+            span {{team.level}}
+          div(flex)
+          div(flex-xs='20') 失约率:
+            span {{team.loseRate}}
+          div.text-right(flex-xs='20') 粉丝:
+            span {{team.fans}}
+
+div#app-user
+  +user-header
+  div.ballTeam-blank
+  +teams

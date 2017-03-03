@@ -1,0 +1,54 @@
+mixin activity-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ui-sref="home.activity")
+        a.navbar-brand.user-middle-text(href="#") 球队详情
+        span.navbar-brand.glyphicon.glyphicon-cog#list(ng-if="1", ng-click="vm.goToTeamAdmin(vm.team._type, vm.team._id)")
+
+#ballTeamDetail
+  +activity-header
+  #team-img(layout="row").mt-50
+    img(flex="100" ng-src="{{vm.team.image}}")
+  #team-intro.bg-white.mb-20
+    div(layout="row" layout-align="space-between center").p-10
+      div
+        span.md-title.pr-10 {{ vm.team.name }}
+        span.md-body-1.red LV: {{ vm.team.level }}
+      span.md-body-1 失约率: {{ vm.team.loseRate }}
+    div.sign.pl-10.pr-10.mb-20
+      p 队伍口号:{{ vm.team.signature }}
+    md-divider
+    div(layout="column" layout-align="center").p-10
+      div(layout="row" layout-align="space-between").md-title
+        span.pl-20 {{ vm.team.overall }}
+        span.pl-15 12
+        span {{ vm.team.fans }}
+      div(layout="row" layout-align="space-between").md-title
+        span Overall
+        span MVP
+        span Fans
+  #ball-team-members.mb-50
+    div(layout="row" layout-align="space-between middle").bg-red#header
+      p.md-title.p-15 战队成员
+      p.md-body-1.p-15 {{ vm.team.members.starting.length + vm.team.members.substitution.length}}人
+    div
+      md-list-item.md-3-line(ng-repeat="member in vm.team.members.starting" layout="row" layout-align="center center").bg-white
+        img(ng-src="{{ member.image }} ").member-img.p-10.mt-13
+        div.md-list-item-text(layout="column")
+          div(layout="row" layout-align="space-between").p-10
+            div
+              span.pr-20 {{ member.name}}
+              span.red LV {{ member.level }}
+            div 粉丝 {{ member.fans }}
+          p.pl-10.pr-10.pb-10 {{ member.signature }}
+          div(layout-align="space-between" layout="row").pr-10.pl-10.mb-10
+            p 位置: PG
+            p MVP: {{ member.MVP }}
+            p 失约率: {{ member.loseRate }}
+        md-divider
+  div(layout="row").navbar.navbar-fixed-bottom
+     md-button.md-warn.md-raised.btn-block#regist-join-btn 申请加入
+
+
+

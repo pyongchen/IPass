@@ -1,0 +1,51 @@
+link(rel="stylesheet" type="text/css"
+  href="app/tools/date-time/mobiscroll.css")
+script(src="app/tools/date-time/mobiscroll.js")
+script(src="bower_components/semantic/dist/semantic.js")
+div#manyToMany
+  div#info-bar
+    span#cancel.pull-left(ui-sref="home.activity") 取消
+    span#info.center-block 发起约球
+    span#publish.pull-right(ng-click="vm.sendInfo()") 确定
+  div#input-container
+    md-input-container#title-container.md-block(flex-gt-sm)
+      label 比赛主题
+      input(ng-model="vm.publishInfo.title")
+    md-input-container#content-container.md-block(flex-gt-sm)
+      label 球友需要注意的事项
+      input(ng-model="vm.publishInfo.content")
+  div#selectInfo
+    div#date
+      div.demos
+        div.publish-icon-div
+          i.wait.big.icon.publish-icon
+          span 时间
+      input#appDateTime(ng-model="vm.publishInfo.time" type="text")
+    div#type
+      div.publish-icon-div
+        i.wait.big.icon.indent
+        span 类型
+      md-select#appType(placeholder="比赛类型" ng-model="vm.publishInfo.type")
+        md-option#appTypeOption(ng-value="type" ng-repeat="type in vm.types") {{type}}
+    div#team(ng-if="vm.publishInfo.type == '3V3' || vm.publishInfo.type == '5V5'")
+      div.publish-icon-div
+        i.wait.big.icon.flag
+        span 球队
+      md-select#appTeam(placeholder="选择球队" ng-model="vm.publishInfo.team")
+        md-option#appTeamOption(ng-value="team.name" ng-repeat="team in vm.player.teams"
+          ng-if="team._type == vm.publishInfo.type") {{team.name}}
+    div#place
+      div.publish-icon-div
+        i.wait.big.icon.marker
+        span 地点
+      input#appPlace(ng-model="vm.publishInfo.place" type="text"
+          ng-click="vm.show()" readonly="true")
+    //div#picture()
+    //  div.publish-icon-div
+    //    i.wait.big.icon.photo
+    //    span 图片
+    //  input#appPhoto(type="text")
+
+div#publish-map
+  div#r-result
+

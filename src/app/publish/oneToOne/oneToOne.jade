@@ -1,0 +1,52 @@
+mixin OneToOneHeader
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ui-sref="home.activity")
+        a.navbar-brand.user-middle-text(href="#") 单挑
+        i.comment.outline.icon#one-message(ng-click="vm.toggleRight()")
+          div.message-num {{8}}
+
+mixin OneToOneMessage
+  md-sidenav#oneToOneSideNav.md-sidenav-right.md-whiteframe-4dp(md-component-id="right")
+    md-toolbar.md-theme-light
+      h3.md-toolbar-tools 聊天
+    md-content#oneToOneSideNav-content(layout-padding)
+      md-list-item.md-2-line.oneToOneMeaasgeItems(ng-repeat = "o in vm.curPlayer.games.one")
+        img.md-avatar(ng-src="{{o.opponent.image}}", ng-click="vm.goToPlayer(o.opponent._id)")
+        div.md-list-item-text(ng-click="vm.goToChat(o.opponent._id)")
+          h3.opponent-name.header {{o.opponent.name}}
+          p.opponent-message {{o.message}}
+
+mixin OneToOneMain
+  div#oneToOne.swiper-container
+    div.swiper-wrapper
+      div.swiper-slide(ng-repeat="player in vm.players")
+        div.ui.link.cards.oneToOneCard.swiper-container
+          div.card
+            div.image
+              img(ng-src="{{player.image}}")
+            div.content
+              div
+                span
+                  i.red.icon.signal.icon-content-level {{player.level}}
+                span
+                  i.green.icon.thumbs.up.icon-content-overall {{player.overall}}
+                span
+                  i.purple.icon.users.icon-content-fans {{player.fans}}
+              div.no-icon-info
+                span {{player.position}}
+                span MVP:{{player.MVP}}
+                span 地区:{{player.loseRate}}
+              div.one-on-one-signature
+                span {{player.signature}}
+            div.extra.content.oneToOneButton
+              button.ui.inverted.red.button(ng-click="vm.sendChange()")
+                i.icon.pointing.up.outline.oneToOne-challenge 挑战他
+              button.ui.inverted.green.button(ng-click="vm.nextPlayer()")
+                i.icon.pointing.remove.circle.oneToOne-challenge 下一个
+    div.swiper-pagination
+div
+  +OneToOneMessage
+  +OneToOneHeader
+  +OneToOneMain

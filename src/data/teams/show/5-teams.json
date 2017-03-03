@@ -1,0 +1,166 @@
+{
+  "data":[
+    {
+      "id": 1,
+      "name": "詹姆斯战队",
+      "image": "assets/images/teams/t4.jpg",
+      "overall": 70,
+      "level": 3,
+      "fans": "30万",
+      "loseRate": "5%",
+      "signature": "一起打球,一起哈皮",
+      "header": {
+        "id": 4,
+        "name": "詹姆斯",
+        "image": "assets/images/players/6.jpg",
+        "signature": "为家乡带来第一个总冠军",
+        "level": 2,
+        "overall": 78,
+        "loseRate": "7%",
+        "fans": "100万",
+        "MVP": 3
+      },
+      "members":{
+        "starting": [
+          {
+            "id": 4,
+            "name": "詹姆斯",
+            "image": "assets/images/players/6.jpg",
+            "signature": "为家乡带来第一个总冠军",
+            "level": 2,
+            "overall": 78,
+            "loseRate": "7%",
+            "fans": "100万",
+            "MVP": 3
+          },
+          {
+            "id": 1,
+            "name": "杜兰特",
+            "image": "assets/images/players/1.jpg",
+            "signature": "加盟金州,剑指总冠军",
+            "level": 2,
+            "overall": 72,
+            "loseRate": "5%",
+            "fans": "21万",
+            "MVP": 2
+          },
+          {
+            "id": 2,
+            "name": "保罗",
+            "image": "assets/images/players/2.jpg",
+            "signature": "度过了11个夏天就知道无法夺冠的赛季",
+            "level": 2,
+            "overall": 72,
+            "loseRate": "5%",
+            "fans": "21万",
+            "MVP": 2
+          },
+          {
+            "id": 3,
+            "name": "科比",
+            "image": "assets/images/players/3.png",
+            "signature": "五个总冠军戒指",
+            "level": 2,
+            "overall": 80,
+            "loseRate": "12%",
+            "fans": "13亿",
+            "MVP": 3
+          },
+          {
+            "id": 5,
+            "name": "威少",
+            "image": "assets/images/players/4.jpg",
+            "signature": "肆虐篮筐,舍我其谁",
+            "level": 2,
+            "overall": 77,
+            "loseRate": "7%",
+            "fans": "80万",
+            "MVP": 1
+          }
+        ],
+        "substitution": []
+      }
+    },
+    {
+      "id": 2,
+      "name": "韦德战队",
+      "image": "assets/images/teams/t5.jpg",
+      "overall": 70,
+      "level": 3,
+      "fans": "30万",
+      "loseRate": "5%",
+      "signature": "天下武功,唯快不破",
+      "header": {
+        "id": 7,
+        "name": "韦德",
+        "image": "assets/images/players/7.jpg",
+        "signature": "终于还是离开了热火",
+        "level": 2,
+        "overall": 77,
+        "loseRate": "5%",
+        "fans": "300万",
+        "MVP": 2
+      },
+      "members":{
+        "starting": [
+          {
+            "id": 7,
+            "name": "韦德",
+            "image": "assets/images/players/7.jpg",
+            "signature": "终于还是离开了热火",
+            "level": 2,
+            "overall": 77,
+            "loseRate": "5%",
+            "fans": "300万",
+            "MVP": 2
+          },
+          {
+            "id": 6,
+            "name": "",
+            "image": "assets/images/players/5.jpg",
+            "signature": "宇宙变相,过掉一切",
+            "level": 2,
+            "overall": 77,
+            "loseRate": "5%",
+            "fans": "300万",
+            "MVP": 2
+          },
+          {
+            "id": 8,
+            "name": "乔治",
+            "image": "assets/images/players/7.jpg",
+            "signature": "满血复出,王者归来",
+            "level": 3,
+            "overall": 71,
+            "loseRate": "4%",
+            "fans": "22万",
+            "MVP": 1
+          },
+          {
+            "id": 9,
+            "name": "哈登",
+            "image": "assets/images/players/9.jpg",
+            "signature": "宁做鸡头,不做凤尾",
+            "level": 2,
+            "overall": 70,
+            "loseRate": "4%",
+            "fans": "15万",
+            "MVP": 0
+          },
+          {
+            "id": 10,
+            "name": "库里",
+            "image": "assets/images/players/10.jpg",
+            "signature": "无理三分,超远射程",
+            "level": 2,
+            "overall": 77,
+            "loseRate": "6%",
+            "fans": "1000万",
+            "MVP": 2
+          }
+        ],
+        "substitution": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+mixin user-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ng-click="vm.goToUser()")
+        a.navbar-brand.user-middle-text(href="#") 信息设置
+        span.navbar-brand.glyphicon.glyphicon-th-list#list(href="#")
+
+mixin edit
+  div.part1
+    md-list
+      md-list-item(ng-click="vm.changeImg()")
+        p 头像
+        img.md-avatar(ng-src="{{vm.player.image}}")
+      md-divider
+      md-list-item(ng-click="vm.changeInfo('用户名', 'name', vm.player.name)")
+        p 用户名
+        p(layout="row", layout-align="end center") {{vm.player.name}}
+      md-divider
+      md-list-item(ng-click="vm.changeInfo('个性签名', 'signature', vm.player.signature)")
+        p 个性签名
+        p(layout="row", layout-align="end center") {{vm.player.signature}}
+      md-divider
+      md-list-item(ng-click="vm.changeInfo('技术特长','feature', vm.player.feature)")
+        p 技术特长
+        p(layout="row", layout-align="end center") {{vm.player.feature}}
+      md-divider
+      md-list-item(ng-click="vm.changeInfo('偶像', 'idol', vm.player.idol)")
+        p 偶像
+        p(layout="row", layout-align="end center") {{vm.player.idol}}
+
+div#app-user
+  +user-header
+  +edit

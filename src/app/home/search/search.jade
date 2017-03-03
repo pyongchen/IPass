@@ -1,0 +1,35 @@
+mixin search
+  div.search(layout='row')
+    span.glyphicon.glyphicon-arrow-left.search-arrow(flex-xs='15' ng-click="vm.goToUser()")
+    md-input-container.search-input(flex-xs='85')
+      label 搜索
+      input(ng-model='vm.input')
+
+mixin button
+  section(layout='row' layout-align='center center')
+    md-button.md-fab.md-primary(ng-click='vm.searchAvtivity()') 活动
+    md-button.md-fab.md-primary(ng-click='vm.searchMember()') 球员
+    md-button.md-fab.md-primary(ng-click='vm.searchTeam()') 球队
+
+mixin activity
+  div(ng-repeat="ac in vm.activities" ng-click="vm.gotoDetail(ac.id, ac.type)").mainpage-activity.bg-success
+    p.theme {{ ac.title }}
+    p.location
+      span.glyphicon.glyphicon-map-marker.pr-10 {{ ac.location }}
+    p.time
+      span.glyphicon.glyphicon-time.pr-10 {{ ac.time }}
+    p.condition
+      span#loseRate 失约: {{ ac.loseRate }}
+      span 等级: {{ ac.level }}
+    p.host {{ ac.referees.name }}
+
+mixin player
+  div(ng-repeat='member in vm.members' layout='row').search-palyer
+    div.search-playerName(flex-xs='40') {{ member.name }}
+    md-button.md-raised.md-primary(flex-xs='30')　加为好友
+
+div#app-search
+  +search
+  +button
+  +activity
+  +player

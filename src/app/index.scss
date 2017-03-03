@@ -1,0 +1,73 @@
+/**
+ *  Do not remove the comment below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+/* vietnamese */
+
+// 全局样式
+html, body, #main-body {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  margin: 0;
+  padding: 0;
+  overflow: scroll;
+  font-family: Arial,Helvetica,sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #eee
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#main-body .btn, #main-body .btn-default, #main-body .nav-btn {
+  outline: none;
+}
+
+// 状态过渡动画
+.animate-slide-left {
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    opacity: 1;
+    // Enter & Leave
+    &.ng-enter {
+        transform: translateX(100%);
+        opacity: 0;
+        &.ng-enter-active {
+            transition-property: all;
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    &.ng-leave {
+        transform: translateX(0);
+        opacity: 1;
+        &.ng-leave-active {
+            transition-property: all;
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+    }
+    // Hide
+    &.ng-hide {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    &.ng-hide-add-active,
+    &.ng-hide-remove-active {
+        transition-property: all;
+    }
+}
+/**
+ *  Do not remove the comment below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

@@ -1,0 +1,66 @@
+mixin user-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ng-click="vm.goToUser()")
+        a.navbar-brand.user-middle-text(href="#") 详细信息
+        span.navbar-brand.glyphicon.glyphicon-th-list#list(href="#")
+
+mixin history
+  div.part1
+    h4 战绩
+    div.wild
+      span 野球:
+      div.progress.prog
+        div.progress-bar.progress-bar-success(role="progressbar" style="width: {{vm.player.history.wild.rate}}%"
+            aria-valuenow="11" aria-valuemin="0" aria-valuemax="12")
+          {{vm.player.history.wild.win}}/{{vm.player.history.wild.total}}
+    div.three
+      span 3V3:
+      div.progress.prog
+        div.progress-bar.progress-bar-info(role="progressbar" style="width: {{vm.player.history.three.rate}}%"
+        aria-valuenow="9" aria-valuemin="0" aria-valuemax="10")
+          {{vm.player.history.three.win}}/{{vm.player.history.three.total}}
+    div.five
+      span 5V5:
+      div.progress.prog
+        div.progress-bar.progress-bar-warning(role="progressbar" style="width: {{vm.player.history.five.rate}}%"
+        aria-valuenow="90" aria-valuemin="0" aria-valuemax="110")
+          {{vm.player.history.five.win}}/{{vm.player.history.five.total}}
+  hr
+
+mixin active
+  div.part2
+    h4 活跃地点
+    div.active-places(ng-repeat="place in vm.player.activePlaces") {{place}}
+  md-divider
+
+mixin overall-detail
+  div.part3
+    h4 实力
+    div#chartdiv
+  md-divider
+
+mixin edit
+  div.part4
+    h4 信息
+    md-list
+      md-list-item(ng-click="vm.changeInfo('个性签名', 'signature', vm.player.signature)")
+        p 个性签名
+        p(layout="row", layout-align="end center") {{vm.player.signature}}
+      md-divider
+      md-list-item(ng-click="vm.changeInfo('技术特长','feature', vm.player.feature)")
+        p 技术特长
+        p(layout="row", layout-align="end center") {{vm.player.feature}}
+      md-divider
+      md-list-item(ng-click="vm.changeInfo('偶像', 'idol', vm.player.idol)")
+        p 偶像
+        p(layout="row", layout-align="end center") {{vm.player.idol}}
+
+
+div#app-user
+  +user-header
+  +history
+  +active
+  +overall-detail
+  +edit

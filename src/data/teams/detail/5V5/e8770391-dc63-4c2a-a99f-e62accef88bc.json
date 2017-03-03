@@ -1,0 +1,85 @@
+{
+  "data": {
+    "id": "e8770391-dc63-4c2a-a99f-e62accef88bc",
+    "name": "天火队",
+    "image": "assets/images/teams/t1.jpg",
+    "overall": 78,
+    "type": "5V5",
+    "level": 3,
+    "fans": "1000万",
+    "loseRate": "5%",
+    "signature": "不要轻言放弃，一旦放弃了，比赛就结束了",
+    "feature": "擅长打阵地战,有一定快攻和三分能力",
+    "header": {
+      "id": "1f661f44-a371-46ba-9722-56ea268dde8e",
+      "name": "梁敦厦",
+      "image": "assets/images/players/2.jpg",
+      "signature": "世界抛弃了我，可还有篮球陪着我",
+      "level": 3,
+      "overall": 73,
+      "loseRate": "8%",
+      "fans": "50万",
+      "MVP": 3
+    },
+    "members":{
+      "starting": [
+        {
+          "id": "1f661f44-a371-46ba-9722-56ea268dde8e",
+          "name": "梁敦厦",
+          "image": "assets/images/players/2.jpg",
+          "signature": "世界抛弃了我，可还有篮球陪着我",
+          "level": 3,
+          "overall": 73,
+          "loseRate": "8%",
+          "fans": "50万",
+          "MVP": 3
+        },
+        {
+          "id": "3d37a9da-e001-4675-a0ab-2290f9e91cd3",
+          "name": "郭山彤",
+          "image": "assets/images/players/1.jpg",
+          "signature": "我从不惧怕任何对手，只怕对手不够强大",
+          "level": 2,
+          "overall": 75,
+          "loseRate": "10%",
+          "fans": "25万",
+          "MVP": 3
+        },
+        {
+          "id": "2430b560-ce50-4c34-b6d2-b232519028c6",
+          "name": "霍负浪",
+          "image": "assets/images/players/3.png",
+          "signature": "我不尊重任何人，包括乔丹，因为我要胜利",
+          "level": 2,
+          "overall": 70,
+          "loseRate": "5%",
+          "fans": "35万",
+          "MVP": 1
+        },
+        {
+          "id": "54d27324-6f21-4bfe-8a94-62848c7d62f5",
+          "name": "虞信品",
+          "image": "assets/images/players/4.jpg",
+          "signature": "我把每一场比赛都当作我最后的一场比赛来打",
+          "level": 4,
+          "overall": 68,
+          "loseRate": "11%",
+          "fans": "15万",
+          "MVP": 3
+        },
+        {
+          "id": "2a5f8226-b35a-4793-ae96-32bddf2fe20d",
+          "name": "马仁毅",
+          "image": "assets/images/players/5.jpg",
+          "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+          "level": 2,
+          "overall": 76,
+          "loseRate": "8%",
+          "fans": "40万",
+          "MVP": 3
+        }
+      ],
+      "substitution": []
+    }
+  }
+}

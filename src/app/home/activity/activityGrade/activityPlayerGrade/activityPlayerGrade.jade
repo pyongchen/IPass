@@ -1,0 +1,35 @@
+mixin PG-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ui-sref="home.activity")
+        a.navbar-brand.user-middle-text(href="#") 球员评分
+        span.navbar-brand.glyphicon.glyphicon-th-list#list(href="#")
+
+#activity-PG
+  +PG-header
+  div(layout="row")
+    img(ng-src="{{vm.team.image}}")#PG-img.mt-50
+  div.mb-50
+    div(layout="row" layout-align="space-around center" ng-repeat="member in vm.players").md-whiteframe-8dp.bg-white.mt-10.mb-10
+        md-list-item.md-3-line(layout="row" layout-align="space-around center")
+          img(ng-src="{{ member.image }} ").img-circle.team-member-img.mr-30.mt-80
+          p#grade-name {{member.name}}
+          div.md-list-item-text(layout="column")
+            div(layout="row")
+              span.pt-14.pr-10 得分:
+              md-slider(min="0" max="100" step="20" flex="70")
+            div(layout="row")
+              span.pt-14.pr-10 篮板:
+              md-slider(min="0" max="100" step="20" flex="70")
+            div(layout="row")
+              span.pt-14.pr-10 助攻:
+              md-slider(min="0" max="100" step="20" flex="70")
+            div(layout="row")
+              span.pt-14.pr-10 盖帽:
+              md-slider(min="0" max="100" step="20" flex="70")
+            div(layout="row")
+              span.pt-14.pr-10 速度:
+              md-slider(min="0" max="100" step="20" flex="70")
+  div(layout="row").navbar.navbar-fixed-bottom.navbar-default.m-0.p-0
+    md-button.btn-block.md-warn.md-raised.m-0.p-0.text-color-white.ensure-btn(ng-click="vm.ensure()") 确认

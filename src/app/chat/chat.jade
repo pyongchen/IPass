@@ -1,0 +1,40 @@
+mixin chat-header
+  nav.navbar.navbar-default.navbar-fixed-top#chat-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ng-click="vm.return()")
+        a.navbar-brand.chat-name(href="#") {{vm.player.name}}
+        span.navbar-brand.glyphicon.glyphicon-user#list(href="#")
+
+mixin right-chat(message)
+  div#right-chat
+    img(ng-src="{{vm.player.image}}")
+    div#right-chat-box2
+    div#right-chat-box1=message
+
+mixin left-chat(message)
+  div#left-chat
+    img(ng-src="{{vm.target.image}}")
+    div#left-chat-box2
+    div#left-chat-box1=message
+
+mixin chat-content
+  div#chat-main-content
+    +right-chat("来不来单挑?")
+    +left-chat("好,场地?几点?")
+    +left-chat("今晚8点佳得乐场")
+    +right-chat("行,记得带球!")
+
+
+mixin chat-box
+  div#chat-box
+    i.icon.volume.up.big#volume-icon
+    div.ui.icon.input#chat-input
+      input(type="text")
+    i.icon.add.circle.big#add-icon
+    i.smile.icon.big#smile-icon
+
+div#chat
+  +chat-header
+  +chat-content
+  +chat-box

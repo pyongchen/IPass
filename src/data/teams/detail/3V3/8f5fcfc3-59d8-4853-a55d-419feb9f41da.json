@@ -1,0 +1,74 @@
+{
+  "data":{
+    "id": "8f5fcfc3-59d8-4853-a55d-419feb9f41da",
+    "name": "传奇队",
+    "image": "assets/images/teams/t3.jpg",
+    "overall": 75,
+    "level": 3,
+    "type": "3V3",
+    "fans": "100万",
+    "loseRate": "6%",
+    "signature": "个人的力量总是渺小的，一个团结一心的集体才会无往而不利",
+    "header": {
+      "id": "54d27324-6f21-4bfe-8a94-62848c7d62f5",
+      "name": "虞信品",
+      "image": "assets/images/players/6.jpg",
+      "signature": "我把每一场比赛都当作我最后的一场比赛来打",
+      "level": 2,
+      "overall": 78,
+      "loseRate": "7%",
+      "fans": "100万",
+      "MVP": 3
+    },
+    "members": {
+      "starting": [
+        {
+          "id": "54d27324-6f21-4bfe-8a94-62848c7d62f5",
+          "name": "虞信品",
+          "image": "assets/images/players/6.jpg",
+          "signature": "我把每一场比赛都当作我最后的一场比赛来打",
+          "level": 2,
+          "overall": 78,
+          "loseRate": "7%",
+          "fans": "100万",
+          "MVP": 3
+        },
+        {
+          "id": "2a5f8226-b35a-4793-ae96-32bddf2fe20d",
+          "name": "马仁毅",
+          "image": "assets/images/players/4.jpg",
+          "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+          "level": 2,
+          "overall": 77,
+          "loseRate": "7%",
+          "fans": "80万",
+          "MVP": 1
+        },
+        {
+          "id": "ef32cd64-d286-4b84-b4d9-2fe85affae93",
+          "name": "简务帅",
+          "image": "assets/images/players/7.jpg",
+          "signature": "我过你就像过清晨的马路，等下我要在这里绝杀你，认住了，是这里",
+          "level": 2,
+          "overall": 71,
+          "loseRate": "10%",
+          "fans": "25万",
+          "MVP": 3
+        }
+      ],
+      "substitution": [
+        {
+          "id": "7236b834-8726-4c44-8459-5638cd574976",
+          "name": "冯州龙",
+          "image": "assets/images/players/6.jpg",
+          "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+          "level": 2,
+          "overall": 76,
+          "loseRate": "8%",
+          "fans": "40万",
+          "MVP": 3
+        }
+      ]
+    }
+  }
+}

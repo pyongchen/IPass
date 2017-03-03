@@ -1,0 +1,46 @@
+mixin teamAdmin-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ui-sref="user({id:'3d37a9da-e001-4675-a0ab-2290f9e91cd3'})")
+        a.navbar-brand.user-middle-text(href="#") 球队管理
+
+mixin team-info
+  div.team-info
+    md-list
+      md-list-item(ng-click="vm.changeImg()")
+        p 头像
+        img(flex="30", ng-src="{{vm.team.image}}")
+      md-divider
+      md-list-item(ng-click="vm.changeInfo('球队名称', 'name', vm.team.name)")
+        p 球队名称
+        p(layout="row", layout-align="end center") {{vm.team.name}}
+      md-divider
+      md-list-item(ng-click="vm.changeInfo('球队签名', 'signature', vm.team.signature)")
+        p 球队签名
+        p(layout="row", layout-align="end center") {{vm.team.signature}}
+      md-divider
+      md-list-item(ng-click="vm.changeInfo('技术特长','feature', vm.team.feature)")
+        p 球队特长
+        p(layout="row", layout-align="end center") {{vm.team.feature}}
+      md-divider
+
+mixin team-player
+  div.team-player
+    h3.flex-offset-5 球队成员
+    md-list-item.noright(ng-repeat="m in vm.team.members.starting" ng-click="vm.goToUser(m.id)")
+      img.md-avatar(ng-src="{{ m.image }}")
+      p {{ m.name }}
+      p Lv{{m.level}}
+      p 实力:{{m.overall}}
+      p 粉丝:{{m.fans}}
+      span.icon-mess.glyphicon.glyphicon-comment(ng-click="vm.chat(m.id)")
+      span.icon-del.glyphicon.glyphicon-remove-circle(ng-click="vm.delPlayer(m)")
+      md-divider.flex-offset-5
+
+div#app-teamAdmin
+  +teamAdmin-header
+  +team-info
+  +team-player
+  div(layout="row").navbar.navbar-default.del-team(ng-click="vm.delTeam()")
+    md-button#signin-btn.md-raised.md-warn.btn-block.m-0(ng-click="vm.signin()") 解散球队

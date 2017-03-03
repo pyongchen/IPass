@@ -1,0 +1,48 @@
+mixin header
+  div.userHoop-header(layout='column')
+    div.userHoop-headerTop(layout='row')
+      span.glyphicon.glyphicon-arrow-left(flex-xs='15' ng-click="vm.goToUser()")
+      span.userHoop-userHoop(flex-xs='20') 球圈
+      span(flex)
+      input.userHoop-input(type="file" ngf-select="vm.uploadFile($files, $invalidFiles)" ngf-accept="'image/*'" ngf-multiple='false')
+      div.glyphicon.glyphicon-camera.text-right.userHoop-topInput
+    div.userHoop-headerBottom
+      div.userHoop-tact.text-center(type="file" ngf-select="vm.uploadFile($files, $invalidFiles)" ngf-accept="'image/*'" ngf-multiple='false') 轻触更换主题照片
+      div.userHoop-owner.text-right
+        span {{ vm.player.name }}
+        img.img-rounded.userHoop-img(ng-src='{{ vm.player.image }}')
+
+mixin message(name, message, imgs, names, talks)
+  div.userHoop-user(layout='row')
+    div(flex-xs='20')
+      img.img-rounded.userHoop-userImg(ng-src='{{vm.player.image}}')
+    div(flex-xs='80' layout='column')
+      div.userHoop-userName=name
+      div.userHoop-message=message
+      div
+        each img in imgs
+          img.img-rounded.userHoop-img.userHoop-margin5(ng-src=img)
+      div.userHoop-more(layout='row')
+        span(flex-xs='20') 100分钟前
+        span(flex)
+        md-menu.text-right(flex-xs='10')
+          span.glyphicon.glyphicon-comment(aria-label='Open menu' ng-click='vm.openMenu($mdOpenMenu, $event)')
+          md-menu-content(width='2')
+            span.glyphicon.glyphicon-heart(ng-click='vm.sayGood()') 点赞
+            span.glyphicon.glyphicon-edit(ng-click='vm.comment(ev)') 评论
+      div.userHoop-star
+        span.glyphicon.glyphicon-heart
+        each name in names
+          span=name
+          span ,
+      div.userHoop-comment
+        each what, who in talks
+          div
+            span=who
+            span : 
+            span=what
+
+div#app-user
+  +header
+  +message('乔丹', '哈哈哈哈哈', ['assets/images/players/1.jpg', 'assets/images/players/2.jpg', 'assets/images/players/4.jpg', 'assets/images/players/4.jpg'], ['张三', '李四', '王五', '刘六', '这个人没有名字'], {'张三': '很强', '王五': '来日再战'})
+  +message('詹姆斯', '呵呵呵额呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵', ['assets/images/players/1.jpg', 'assets/images/players/2.jpg', 'assets/images/players/4.jpg'], ['很多', 'michael', 'jackson', 'hahahahaahha'], {})

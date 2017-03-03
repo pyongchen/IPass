@@ -1,0 +1,74 @@
+script(src="../../bower_components/semantic/dist/semantic.js")
+mixin user-info
+  md-divider
+  div.media.user-info
+    a.media-left(href="#")
+      img.img-circle.user-image(ng-src="{{vm.player.image}}" alt="...")
+    div.media-body
+      span.name {{vm.player.name}}
+      span.level Lv {{vm.player.level}}
+      span.loseRate 失约率:{{vm.player.loseRate}}
+      br
+      h4.signature {{vm.player.signature}}
+    hr
+    div.info-box
+      div(layout="column" layout-align="center").p-10
+        div(layout="row" layout-align="space-between").md-title
+          span(flex="20") 位置
+          span(flex="20") 实力
+          span(flex="20") MVP
+          span(flex="20") 粉丝
+        div(layout="row" layout-align="space-between").md-title.info-content
+          span(flex="20") {{vm.player.position}}
+          span(flex="20") {{vm.player.overall}}
+          span(flex="20") {{vm.player.MVP}}
+          span(flex="20") {{vm.player.fans}}
+  md-divider
+
+mixin info-list
+  div.ui.large.horizontal.animated.list
+    div.item.user-info-item#first-info(ng-click="vm.goToMessage()")
+      i.icon.comments.big
+      div.content
+        div.header 消息
+    div.item.user-info-item(ng-click="vm.goToMyGames()")
+      i.icon.lightning.big
+      div.content
+        div.header 比赛
+    div.item.user-info-item(ng-click="vm.goToMyFriends()")
+      i.icon.users.big
+      div.content
+        div.header 球友
+    div.item.user-info-item(ng-click="vm.goToMyTeams()")
+      i.icon.flag.big
+      div.content
+        div.header 球队
+    div.item.user-info-item(ng-click="vm.goToHoop()")
+      i.icon.life.ring.big
+      div.content
+        div.header 球圈
+    div.item.user-info-item(ng-click="vm.goToDetail()")
+      i.icon.zoom.big
+      div.content
+        div.header 详细
+    div.item.user-info-item(ng-click="vm.goToSetting()")
+      i.icon.settings.big
+      div.content
+        div.header 设置
+    div.item.user-info-item(ng-click="vm.alertLogout()")
+      i.icon.sign.out.big
+      div.content
+        div.header 退出
+    div.ui.basic.modal#logout-dialog
+      div.header 是否退出当前用户?
+      div.actions
+        div.two.fluid.ui.inverted.buttons
+          div.ui.cancel.red.basic.button(ng-click="vm.chancel()")
+            i.remove.icon#logout-chancel 取消
+          div.ui.ok.green.basic.button(ng-click="vm.logout()")
+            i.checkmark.icon#logout-makesure 确定
+
+div#app-user
+  +user-info
+  +info-list
+  //+games

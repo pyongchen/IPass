@@ -1,0 +1,85 @@
+{
+  "data": {
+    "id": "03c71f5d-a7da-497c-982a-1c5693d66ced",
+    "name": "王者队",
+    "image": "assets/images/teams/t5.jpg",
+    "overall": 71,
+    "type": "3V3",
+    "level": 3,
+    "fans": "30万",
+    "loseRate": "8%",
+    "signature": "人人为我，我为人人",
+    "header": {
+      "id": "1f661f44-a371-46ba-9722-56ea268dde8e",
+      "name": "梁敦厦",
+      "image": "assets/images/players/2.jpg",
+      "signature": "世界抛弃了我，可还有篮球陪着我",
+      "level": 2,
+      "overall": 72,
+      "loseRate": "5%",
+      "fans": "21万",
+      "MVP": 2
+    },
+    "members": {
+      "starting":[
+        {
+          "id": "1f661f44-a371-46ba-9722-56ea268dde8e",
+          "name": "梁敦厦",
+          "image": "assets/images/players/2.jpg",
+          "signature": "世界抛弃了我，可还有篮球陪着我",
+          "level": 2,
+          "overall": 72,
+          "loseRate": "5%",
+          "fans": "21万",
+          "MVP": 2
+        },
+        {
+          "id": "3d37a9da-e001-4675-a0ab-2290f9e91cd3",
+          "name": "郭山彤",
+          "image": "assets/images/players/1.jpg",
+          "signature": "我从不惧怕任何对手，只怕对手不够强大",
+          "level": 2,
+          "overall": 75,
+          "loseRate": "10%",
+          "fans": "25万",
+          "MVP": 3
+        },
+        {
+          "id": "2430b560-ce50-4c34-b6d2-b232519028c6",
+          "name": "霍负浪",
+          "image": "assets/images/players/3.png",
+          "signature": "我不尊重任何人，包括乔丹，因为我要胜利",
+          "level": 2,
+          "overall": 80,
+          "loseRate": "12%",
+          "fans": "13亿",
+          "MVP": 3
+        }
+      ],
+      "substitution": [
+        {
+          "id": "f988561e-a60a-4a87-8754-d06840313d6e",
+          "name": "谢尉争",
+          "image": "assets/images/players/9.jpg",
+          "signature": "现在他们确实比我强，但我相信在不久的将来会打败他们",
+          "level": 1,
+          "overall": 73,
+          "loseRate": "2%",
+          "fans": "10万",
+          "MVP": 3
+        },
+        {
+          "id": "738b43bc-3f2b-4714-9d5d-81385fdac0da",
+          "name": "赵单羽",
+          "image": "assets/images/players/10.jpg",
+          "signature": "你永远不要低估一颗冠军的心",
+          "level": 4,
+          "overall": 65,
+          "loseRate": "4%",
+          "fans": "28万",
+          "MVP": 3
+        }
+      ]
+    }
+  }
+}

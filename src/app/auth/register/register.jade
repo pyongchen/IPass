@@ -1,0 +1,16 @@
+div#auth
+  div#register-box
+    div.ui.left.icon.input#input-phone
+      input(ng-model="vm.phone", type="text" placeholder="输入手机号")
+      i.phone.icon
+    div.ui.action.input#input-code
+      input(ng-model="vm.code", type="text" placeholder="验证码")
+      button#getCode.ui.button(ng-click="vm.getCode()") 获取验证码
+    div.ui.left.icon.input#reg-password
+      input(ng-model="vm.password" type="password" placeholder="输入密码")
+      i.keyboard.icon
+    div.ui.left.icon.input#reg-repeat
+      input(ng-model="vm.repeatPassword" type="password" placeholder="确认密码")
+      i.keyboard.icon
+    button.ui.button#reg-submit(ng-click="vm.register()" type="submit") 确认
+    div#registerErrInfo {{vm.errInfo}}

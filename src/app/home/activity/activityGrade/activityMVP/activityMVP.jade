@@ -1,0 +1,21 @@
+mixin user-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ui-sref="home.activity")
+        a.navbar-brand.user-middle-text(href="#") MVP选取
+        span.navbar-brand.glyphicon.glyphicon-th-list#list(href="#")
+
+#activityMVP
+  +user-header
+  div(layout="row").pt-50
+    img(ng-src="{{ vm.team.image }}" flex)#MVP-team-img
+  div(layout="row" layout-wrap)
+    md-list-item.md-3-line(ng-repeat="member in vm.players" flex="45" ng-click="vm.chooseMVP(member._id)").bg-white.m-10.win-member.md-whiteframe-7dp
+      img(ng-src="{{ member.image }} ").md-avatar
+      div.md-list-item-text(layout="column")
+        p {{ member.name }}
+        p 综合实力: {{ member.overall }}
+        p 粉丝: {{ member.fans }}
+  div.navbar.navbar-default.navbar-fixed-bottom
+    button.btn-block.bg-red.text-color-white.ensure-MVP(ng-click="vm.ensureMVP()") 选为MVP

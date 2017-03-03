@@ -1,0 +1,17 @@
+mixin head-header
+  nav.navbar.navbar-default.navbar-fixed-top#user-header
+    div.container
+      div.navbar-header
+        span.navbar-brand.glyphicon.glyphicon-arrow-left.left(ui-sref="home.activity")
+        a.navbar-brand.user-middle-text(href="#") 热力图
+
+mixin head-map
+  div#container
+    div#r-result
+  div#heat-btn
+    button.ui.green.button(ng-click="vm.openHeatmap()") 显示热力图
+    button.ui.red.button(ng-click="vm.closeHeatmap()") 关闭热力图
+
+div#app-heat
+  +head-header
+  +head-map

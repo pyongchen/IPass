@@ -1,0 +1,67 @@
+script(src="app/tools/selectMenu/select.js")
+div#activity
+  div.screening
+    ul.select-ul
+      li.selectTime 时间
+        i.angle.up.icon#select-time-icon
+      li.selectLocation 地区
+        i.angle.up.icon#select-location-icon
+      li.selectType 类型
+        i.angle.up.icon#select-type-icon
+      li.multiSelect 筛选
+        i.angle.up.icon#select-multi-icon
+  div.time-eject
+    ul.time-first
+      li(ng-repeat="first in vm.timeSelect.first")  {{first}}
+    ul.time-second
+      li(ng-repeat="second in vm.timeSelect.second") {{second}}
+  div.location-eject
+    ul.location-first
+      li(ng-repeat="(key, value) in vm.locationSelect") {{key}}
+    ul.location-second
+      li 大学城
+      li 市桥
+      li 沙头
+      li 东环
+      li 桥南
+      li 大石
+      li 洛浦
+      li 石壁
+    ul.location-third
+      li 中大
+      li 广外
+      li 华师
+      li 广工
+      li 华工
+      li 广大
+  div.type-eject
+    ul.type-first
+      li 全部
+      li 野球
+      li 3V3
+      li 5V5
+  div.multi-eject
+    ul.multi-first
+      li(ng-click="vm.multiSelect('离我最近')") 离我最近
+      li(ng-click="vm.multiSelect('实力最强')") 实力最强
+      li(ng-click="vm.multiSelect('粉丝最多')") 粉丝最多
+      li(ng-click="vm.multiSelect('等级最高')") 等级最高
+      li(ng-click="vm.multiSelect('失约率最低')") 失约率最低
+  div(layout="row")#user-experience
+    div.progress#experience(flex="120")
+      div.progress-bar.progress-bar-success(role="progressbar" style="width: 12.3%"
+      aria-valuenow="11" aria-valuemin="0" aria-valuemax="12") 12.3%
+    div(flex="30", ng-click="vm.goToHeatMap()").heat
+      md-button.md-raised.md-primary
+        i.icon.fire.large.red.heat-text 热度
+  div.mainpage-activities.mb-80
+    div(ng-repeat="ac in vm.sactivities" ng-click="vm.gotoDetail(ac)").mainpage-activity.bg-success
+      p.theme {{ ac.title }}
+      p.location
+        span.glyphicon.glyphicon-map-marker.pr-10 {{ ac.location }}
+      p.time
+        span.glyphicon.glyphicon-time.pr-10 {{ ac.time }}
+      p.condition
+        span#loseRate 失约: {{ ac.loseRate }}
+        span 等级: {{ ac.level }}
+      p.host {{ ac.referees.name }}

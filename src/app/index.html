@@ -1,0 +1,78 @@
+  <!doctype html>
+<html ng-app="app">
+  <head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>IPass</title>
+    <meta name="description" content="IPass">
+    <link rel="icon" href="../assets/images/logo.jpeg">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="陈平永、洪创煌、陈纪庚、欧光文">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="bower_components/semantic/dist/semantic.css" />
+    <script src="app/tools/amChart/amcharts.js"></script>
+    <script src="app/tools/amChart/radar.js"></script>
+    <script src="app/tools/amChart/export.min.js"></script>
+    <link rel="stylesheet" href="app/tools/amChart/export.css" type="text/css" media="all" />
+</head>
+    <style>
+      @font-face {
+        font-family:"icomoon";
+        src:url("https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot");
+        font-weight:normal;
+        font-style:normal;
+      }
+
+      @font-face {
+        font-family: 'icomoon';
+        src:url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot?-cmq1um');
+        src:url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.eot?#iefix-cmq1um') format('embedded-opentype'),
+        url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.woff?-cmq1um') format('woff'),
+        url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.ttf?-cmq1um') format('truetype'),
+        url('https://cdn.rawgit.com/angular/material/master/docs/app/fonts/icomoon.svg?-cmq1um#icomoon') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+<body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div ui-view="main" class="animate-slide-left" id="main-body"></div>
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=HI5KfZ2rK64k1lydWIpaMYp5bgFxBByy"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/Heatmap/2.0/src/Heatmap_min.js"></script>
+    <script src="app/tools/map/courts.js" ></script>
+
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- run `gulp inject` to automatically populate bower script dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <!-- js files will be automatically insert here -->
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+  </body>
+</html>
