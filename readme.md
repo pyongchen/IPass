@@ -41,5 +41,14 @@ gulp serve
 2. 借鉴Fuse的apiResolver的功能，已在index.api.js中实现该功能，可直接使用。
 3. 页面跳转关系已基本完成，后期有改正再继续调整。
 
-
+# 部分页面展示
+1. 首页
+<img src="https://github.com/CPYcpyCPY/IPass/blob/master/src/assets/images/show/home.png?raw=true"
+  width="412px" height="732px">
+2. 我的
+<img src="https://github.com/CPYcpyCPY/IPass/blob/master/src/assets/images/show/me.png?raw=true"
+   width="412px" height="732px">
+3. 热力图
+<img src="https://github.com/CPYcpyCPY/IPass/blob/master/src/assets/images/show/heat.png?raw=true"
+   width="412px" height="732px">
 
